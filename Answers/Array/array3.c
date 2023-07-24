@@ -1,4 +1,3 @@
-// WAP to input 10 integers in an 1-D array print them
 #include <stdio.h>
 int main()
 {
@@ -9,10 +8,12 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    printf("The array is :- ");
-    for (int i = 0; i < 10; i++)
+    int small = a[0];
+    for (int i = 1; i < 10; i++)
     {
-        printf("%d\t", a[i]);
+        if (a[i] < small)
+            small = a[i];
     }
+    printf("The smallest number in the array is: %d", small);
     return 0;
 }
